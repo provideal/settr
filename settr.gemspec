@@ -5,8 +5,8 @@ require "settr/version"
 Gem::Specification.new do |s|
   s.name        = "settr"
   s.version     = Settr::VERSION
-  s.authors     = ["Torsten Sprenger"]
-  s.email       = ["ts@metaminded.com"]
+  s.authors     = ["Torsten Sprenger, Peter Horn"]
+  s.email       = ["ts@metaminded.com, ph@metaminded.com"]
   s.homepage    = "https://github.com/provideal/settr"
   s.summary     = %q{key-value based storage for configuration settings in Rails apps}
   s.description = %q{Settr is a key-value based storage for configuration settings in Rails apps}
