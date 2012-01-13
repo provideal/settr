@@ -1,4 +1,12 @@
-<%= form_tag({}, {:class => 'settr'}) do %>  
-  <%= render :partial => 'setting', :locals => {:object => @settings, :level => 0, :key => ''} %>
-  <%= submit_tag t('settr.submit') %>
+<%= simple_form_for setting do |f| %>
+  <%= f.input :key %>
+  <%= f.input :value %>
+  <%= f.input :typ, :as => :string %>
+  <%= f.input :typ, :collection => ['string', 'text', 'boolean', 'integer', 'float', 'select'], :include_blank => false %>
+  <%= f.input :alterable %>
+  <%= f.submit %>
 <% end %>
+
+<% # TODO: switch to text mode if 'select' is selected %>
+<script type="text/javascript" charset="utf-8">
+</script>

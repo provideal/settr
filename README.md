@@ -10,7 +10,8 @@ Usage
 -----
 
 rake settr_engine:install:migrations
-raek db:migration
+
+rake db:migrate
 
 Authors
 -------

@@ -1,0 +1,12 @@
+<table>
+<% @settings.each do |s| %>
+  <tr>
+    <td><%= s.key %></td>
+    <td><%= s.value %></td>
+    <td><%= s.typ %></td>
+    <td><%= s.alterable %></td>
+    <td><%= link_to t('settr.action.destroy'), settr_setting_path(s), :method => :delete, :confirm => t('settr.action.really_destroy') %></td>
+    <td><%= link_to t('settr.action.edit'), edit_settr_setting_path(s) %></td>
+  </tr>
+<% end %>
+</table>
