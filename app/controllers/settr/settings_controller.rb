@@ -7,16 +7,11 @@ class Settr::SettingsController < Settr::ApplicationController
     if request.post?
       params[:settr].each do |k, v|
         setting = SettrSetting.find_by_key(k)
-        case setting.typ
-          when 'boolean'
-            setting.value = (v == '1').to_s
-          else
-            setting.value = v       
-        end
+        setting.value = (setting.typ == 'boolean' ? (v == '1').to_s : v)
         setting.save!
-      end
-      
+      end      
       flash[:success] = 'Einstellungen gesichert'
+      redirect_to settr_settings_path
     end
   end
 end

@@ -1,6 +1,6 @@
-Settr::Application.routes.draw do
+Rails.application.routes.draw do
   # settr
   namespace :settr do
-    match 'settings' => 'settings#settings' 
-  end
+    match 'settings' => 'settings#edit' 
+  end  
 end

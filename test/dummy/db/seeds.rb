@@ -1,7 +1,34 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+SettrSetting.create!({
+  :key        => 'collection1.group1.price',
+  :value      => '1.0',
+  :typ        => 'float',
+  :alterable  => 'true'
+})
+
+SettrSetting.create!({
+  :key        => 'collection1.bool',
+  :value      => 'true',
+  :typ        => 'boolean',
+  :alterable  => 'true'
+})
+
+SettrSetting.create!({
+  :key        => 'collection1.group1.number',
+  :value      => '1',
+  :typ        => 'integer',
+  :alterable  => 'true'
+})
+
+SettrSetting.create!({
+  :key        => 'collection1.group2.string',
+  :value      => 'lorem ipsum',
+  :typ        => 'string',
+  :alterable  => 'true'
+})
+
+SettrSetting.create!({
+  :key        => 'collection2.group3.select',
+  :value      => 'first_option',
+  :typ        => 'first_option, second_option, third_option',
+  :alterable  => 'true'
+})
