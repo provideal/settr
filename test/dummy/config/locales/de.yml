@@ -1,0 +1,22 @@
+de:
+  settr:
+    submit: 'Einstellungen sichern'
+    collection1:
+      _title: 'Gliederung 1'
+      bool: 'An/Aus'
+      group1:
+        _title: 'Gruppe 1'
+        price:  'Preis'
+        number: 'Anzahl'
+      group2:
+        _title: 'Gruppe 2'
+        string: 'Zeichenkette'
+    collection2:
+      _title: 'Gliederung 2'
+      group3:
+        _title: 'Gruppe 3'
+        select:
+          _title: 'Auswahl'
+          first_option: 'erste Auswahl'
+          second_option: 'zweite Auswahl'
+          third_option: 'dritte Auswahl'

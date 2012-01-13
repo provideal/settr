@@ -1,0 +1,4 @@
+<%= form_tag({}, {:class => 'settr'}) do %>  
+  <%= render :partial => 'setting', :locals => {:object => @settings, :level => 0, :key => ''} %>
+  <%= submit_tag t('settr.submit') %>
+<% end %>
