@@ -15,7 +15,7 @@ to install settr and modify */config/initializers/settr.rb* to your needs.
 The path to settr settings is */settr/settings/settings*.
 
 Check out the dummy app in the test directory (load seed data via `rake db:seed`).
-One can access settr settings by e.g. `Settr.collection1.group1.my_setting`.
+One can access settr settings by e.g. `Settr.my_group.my_subgroup.my_setting`.
 
 Authors
 -------
