@@ -4,6 +4,7 @@ class CreateSettrSettings < ActiveRecord::Migration
       t.string    'key',        :unique => true
       t.string    'value'
       t.string    'typ'
+      t.string    'options',    :default => ''
       t.boolean   'alterable',  :default => true
       t.timestamps
     end

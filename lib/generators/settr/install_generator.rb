@@ -1,17 +1,17 @@
-module Settr
+class Settr
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      include Rails::Generators::Migration
-      source_root File.expand_path('../templates', __FILE__)
       desc "install settr default files"
 
-      def self.next_migration_number(path)
-        @prev_migration_nr ||= Time.now.utc.strftime("%Y%m%d%H%M%S").to_i
-        (@prev_migration_nr).to_s
-      end
+      source_root File.expand_path('../templates', __FILE__)
 
-      def copy_migrations
-        migration_template "db/migrate/create_settr_settings.rb", "db/migrate/create_settr_settings.rb"
+      def copy_initializer
+        copy_file 'settr.rb', 'config/initializers/settr.rb'
+      end
+      
+      def copy_and_run_migration
+        run 'rake settr_engine:install:migrations'
+        run 'rake db:migrate'
       end
     end
   end

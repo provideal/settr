@@ -29,6 +29,7 @@ SettrSetting.create!({
 SettrSetting.create!({
   :key        => 'collection2.group3.select',
   :value      => 'first_option',
-  :typ        => 'first_option, second_option, third_option',
+  :typ        => 'select',
+  :options    => 'first_option, second_option, third_option',
   :alterable  => 'true'
 })

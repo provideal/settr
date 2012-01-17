@@ -1,12 +1,26 @@
-<%= simple_form_for setting do |f| %>
-  <%= f.input :key %>
-  <%= f.input :value %>
-  <%= f.input :typ, :as => :string %>
-  <%= f.input :typ, :collection => ['string', 'text', 'boolean', 'integer', 'float', 'select'], :include_blank => false %>
-  <%= f.input :alterable %>
-  <%= f.submit %>
+<%= simple_form_for setting, :html => {:class => Settr.form_class} do |f| %>
+  <%= f.input :key, :label => t('settr.model.key') %>
+  <%= f.input :value, :label => t('settr.model.value') %>
+  <%= f.input :typ, :label => t('settr.model.typ'), :collection => ['string', 'text', 'boolean', 'integer', 'float', 'select'], :include_blank => false %>
+  <%= f.input :options, :label => t('settr.model.options'), :label_html => {:class => 'settr_setting_options_label'} %>
+  <%= f.input :alterable, :label => t('settr.model.alterable') %>
+  <%= f.submit (params[:action] == 'edit' ? t('settr.form.submit.edit') : t('settr.form.submit.new')) %>
 <% end %>
 
-<% # TODO: switch to text mode if 'select' is selected %>
 <script type="text/javascript" charset="utf-8">
+$(function(){
+  $(".settr_setting_options_label").hide();
+
+  <% unless setting.select? %>
+    $("#settr_setting_options").hide();
+  <% end  %>
+  
+  $("#settr_setting_typ").change(function(){
+    if ($("#settr_setting_typ :selected").text() == 'select') {
+      $("#settr_setting_options").show();
+    } else {
+      $("#settr_setting_options").hide().val('');     
+    }
+  }); 
+});
 </script>

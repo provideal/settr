@@ -1,22 +1,5 @@
 de:
   settr:
-    submit: 'Einstellungen sichern'
-    title:
-      new: 'Einstellungsattribut anlegen'
-      update: 'Einstellungsattribut bearbeiten'
-    action:
-      destroy: 'löschen'
-      edit: 'bearbeiten'
-      really_destroy: 'Wirklich löschen?'
-    settings: 
-      saved: 'Einstellungen gesichert'
-    setting:
-      created: 'Einstellungsattribut angelegt'
-      not_created: 'Einstellungsattribut konnte nicht angelegt werden'
-      updated: 'Einstellungsattribut aktualisiert'
-      not_updated: 'Einstellungsattribut konnte nicht aktualisiert werden'
-      deleted: 'Einstellungsattribut gelöscht'
-      not_deleted: 'Einstellungsattribut konnte nicht gelöscht werden'
     collection1:
       _title: 'Gliederung 1'
       bool: 'An/Aus'

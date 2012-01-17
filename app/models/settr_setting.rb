@@ -13,5 +13,12 @@ class SettrSetting < ActiveRecord::Base
         value
     end
   end
-
+  
+  def select?
+    typ == 'select'
+  end
+  
+  def options=(opts)
+    write_attribute :options, opts.gsub(' ','').gsub(',', ', ')
+  end
 end

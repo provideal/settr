@@ -2,6 +2,33 @@ require 'rails'
 require 'simple_form'
 
 class Settr
+
+  # resources
+  cattr_accessor :resources
+  @@resources
+
+  # header 
+  cattr_accessor :header_tag, :header_class
+  @@header_tag
+  @@header_class
+
+  # table
+  cattr_accessor :table_class
+  @@table_class
+  
+  # form
+  cattr_accessor :form_class
+  @@form_class
+  
+  #links
+  cattr_accessor :link_class
+  @@link_class
+  
+  # default way to setup settr
+  def self.setup
+    yield self
+  end
+  
   def self.method_missing(*args)
     Settr.new.send(*args)
   end
@@ -14,7 +41,7 @@ class Settr
 
   def get_val()
     setting = SettrSetting.where(key: @str).first
-    raise "missing settr setting '#{@str}'" unless setting
+    return unless setting
     setting.val
   end
 

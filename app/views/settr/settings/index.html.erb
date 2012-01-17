@@ -1,12 +1,27 @@
-<table>
+<%= header t('settr.title.index') %>
+
+<%= link t('settr.link.settings'), settings_settr_settings_path %>
+<%= link t('settr.link.new'), new_settr_setting_path %>
+
+<table class="<%= Settr.table_class %>">
+  <thead>
+    <tr>
+      <th><%= t('settr.model.key') %></th>
+      <th><%= t('settr.model.value') %></th>
+      <th><%= t('settr.model.typ') %></th>
+      <th><%= t('settr.model.options') %></th>
+      <th><%= t('settr.model.alterable') %></th>
+    </tr>
+  </thead>
 <% @settings.each do |s| %>
   <tr>
     <td><%= s.key %></td>
     <td><%= s.value %></td>
     <td><%= s.typ %></td>
+    <td><%= s.options %></td>
     <td><%= s.alterable %></td>
-    <td><%= link_to t('settr.action.destroy'), settr_setting_path(s), :method => :delete, :confirm => t('settr.action.really_destroy') %></td>
-    <td><%= link_to t('settr.action.edit'), edit_settr_setting_path(s) %></td>
+    <td><%= link t('settr.link.destroy'), settr_setting_path(s), :method => :delete, :confirm => t('settr.link.really_destroy') %></td>
+    <td><%= link t('settr.link.edit'), edit_settr_setting_path(s) %></td>
   </tr>
 <% end %>
 </table>

@@ -3,15 +3,18 @@ Settr
 
 Settr is a hierarchical key-value based storage for configuration settings in Rails apps.
 
-WARNING: Under heavy development: I think I should write that this gem is not yet production ready. 
-So you should probably wait a bit if you want to use that.
-
 Usage
 -----
 
-rake settr_engine:install:migrations
+Use 
 
-rake db:migrate
+`rails g settr:install` 
+
+to install settr and modify */config/initializers/settr.rb* to your needs.
+
+Check out the dummy app in the test directory (load seed data via `rake db:seed`).
+
+The path to settr settings is */settr/settings/settings*.
 
 Authors
 -------

@@ -1,1 +1,21 @@
 en:
+  settr:
+    collection1:
+      _title: 'Collection 1'
+      bool: 'On/Off'
+      group1:
+        _title: 'Group 1'
+        price:  'Price'
+        number: 'Number'
+      group2:
+        _title: 'Group 2'
+        string: 'String'
+    collection2:
+      _title: 'Collection 2'
+      group3:
+        _title: 'Group 3'
+        select:
+          _title: 'Options'
+          first_option: 'First Option'
+          second_option: 'Second Option'
+          third_option: 'Third Option'

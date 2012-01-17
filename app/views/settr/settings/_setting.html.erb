@@ -18,11 +18,11 @@
         <% when 'integer' %>
           <label class="clearfix"><%= t("settr.#{object.key}") %></label>
           <input type="text" name="settr[<%= object.key %>]" value="<%= object.value %>" />
-        <% else %>
+        <% when 'select' %>
           <label class="clearfix"><%= t("settr.#{object.key}._title") %></label>
           <select name="settr[<%= object.key %>]">
-            <% object.typ.split(', ').each do |option| %>
-              <option value="<%= option %>" <%= 'selected' if object.value == option %> ><%= t("settr.#{key}.#{option}") %></option>
+            <% object.options.split(', ').each do |option| %>
+              <option value="<%= option %>" <%= 'selected' if object.value == option %> ><%= t("settr.#{object.key}.#{option}") %></option>
             <% end %>
           </select>
       <% end %>
@@ -32,7 +32,7 @@
   <%= content_tag "h#{level}" do %>
     <%= t("settr.#{key}._title") %>
   <% end if level > 0 %>
-  <% object.each do |k, v| %>
+  <% object.sort_by{|k, v| k}.each do |k, v| %>
     <%= render :partial => 'setting', :locals => {:object => v, :level => level + 1, :key => "#{key}.#{k}"} %>
   <% end %>
   <div class="horizontal_line grey"></div>
