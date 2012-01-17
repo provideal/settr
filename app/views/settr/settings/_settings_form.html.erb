@@ -1,4 +1,4 @@
-<%= form_tag({}, {:class => Settr.form_class}) do %>  
+<%= form_tag({}, {:class => ['simple_form', 'settr_form', Settr.form_class].compact.join(' ')}) do %>  
   <%= render :partial => 'setting', :locals => {:object => @settings, :level => 0, :key => ''} %>
   <%= submit_tag t('settr.form.submit.settings') %>
 <% end %>

@@ -1,4 +1,4 @@
-<%= simple_form_for setting, :html => {:class => Settr.form_class} do |f| %>
+<%= simple_form_for setting, :html => {:class => ['settr_form', Settr.form_class].compact.join(' ')} do |f| %>
   <%= f.input :key, :label => t('settr.model.key') %>
   <%= f.input :value, :label => t('settr.model.value') %>
   <%= f.input :typ, :label => t('settr.model.typ'), :collection => ['string', 'text', 'boolean', 'integer', 'float', 'select'], :include_blank => false %>
