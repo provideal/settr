@@ -1,0 +1,5 @@
+<%= header t('settr.title.settings') %>
+
+<%= link(t('settr.link.index'), settr_settings_path) if Settr.resources %>
+
+<%= render :partial => 'settings_form' %>

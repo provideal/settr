@@ -1,0 +1,36 @@
+en:
+  settr:
+    model:
+      key: 'Key'
+      value: 'Value'
+      typ: 'Data Type'
+      alterable: 'Alterable'
+      options: 'Options'
+    form:
+      submit:
+        new: 'Create Setting'
+        edit: 'Update Setting'
+        settings: 'Save Settings'
+    title:
+      index: 'Settings'
+      new: 'Create Setting'
+      edit: 'Edit Setting'
+      settings: 'Settings'
+    link:
+      destroy: 'Delete'
+      edit: 'Edit'
+      really_destroy: 'Really delete?'
+      new: 'Create Setting'
+      settings: 'To Settings'
+      index: 'All Settings'
+    settings: 
+      saved: 'Settings saved'
+    setting:
+      created: 'Setting created'
+      not_created: 'Setting could not be created'
+      not_created_value_not_in_options: 'Setting could not be created, because its value is not contained in options'
+      updated: 'Setting updated'
+      not_updated: 'Setting could not be updated'
+      not_updated_value_not_in_options: 'Setting could not be updated, because its value is not contained in options'
+      deleted: 'Setting deleted'
+      not_deleted: 'Setting could not be deleted'

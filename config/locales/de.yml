@@ -1,0 +1,36 @@
+de:
+  settr:
+    model:
+      key: 'Schlüssel'
+      value: 'Wert'
+      typ: 'Datentyp'
+      alterable: 'Modifizierbar'
+      options: 'Auswahlmöglichkeiten'
+    form:
+      submit:
+        new: 'Einstellungsattribut anlegen'
+        edit: 'Einstellungsattribut aktualisieren'
+        settings: 'Einstellungen sichern'
+    title:
+      index: 'Einstellungsattribute'
+      new: 'Einstellungsattribut anlegen'
+      edit: 'Einstellungsattribut bearbeiten'
+      settings: 'Einstellungen'
+    link:
+      destroy: 'Löschen'
+      edit: 'Bearbeiten'
+      really_destroy: 'Wirklich löschen?'
+      new: 'Einstellungsattribut anlegen'
+      settings: 'Zu Einstellungen'
+      index: 'Alle Einstellungsattribute'
+    settings: 
+      saved: 'Einstellungen gesichert'
+    setting:
+      created: 'Einstellungsattribut angelegt'
+      not_created: 'Einstellungsattribut konnte nicht angelegt werden'
+      not_created_value_not_in_options: 'Einstellungsattribut konnte nicht angelegt werden, da der angegebene Wert nicht bei den Auswahlmöglichkeiten auftritt'
+      updated: 'Einstellungsattribut aktualisiert'
+      not_updated: 'Einstellungsattribut konnte nicht aktualisiert werden'
+      not_updated_value_not_in_options: 'Einstellungsattribut konnte nicht aktualisiert werden, da der angegebene Wert nicht bei den Auswahlmöglichkeiten auftritt'
+      deleted: 'Einstellungsattribut gelöscht'
+      not_deleted: 'Einstellungsattribut konnte nicht gelöscht werden'
