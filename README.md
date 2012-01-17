@@ -12,9 +12,10 @@ Use
 
 to install settr and modify */config/initializers/settr.rb* to your needs.
 
-Check out the dummy app in the test directory (load seed data via `rake db:seed`).
-
 The path to settr settings is */settr/settings/settings*.
+
+Check out the dummy app in the test directory (load seed data via `rake db:seed`).
+One can access settr settings by e.g. `Settr.collection1.group1.my_setting`.
 
 Authors
 -------
