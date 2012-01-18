@@ -20,7 +20,7 @@ class Settr
   cattr_accessor :form_class
   @@form_class
   
-  #links
+  # links
   cattr_accessor :link_class
   @@link_class
   
@@ -67,15 +67,17 @@ class Settr
     end
   end
 
-  def self.all
-    SettrSetting.all.inject({}) do |h, s|
-      kk = s.key.split(".")
-      hh = h
-      kk.each_with_index do |k, i|
-        hh[k] ||= (i == kk.count-1 ? s : {})
-        hh = hh[k]
+  [:all, :alterable].each do |method|
+    self.define_singleton_method(method) do
+      SettrSetting.send(method).inject({}) do |h, s|
+        kk = s.key.split(".")
+        hh = h
+        kk.each_with_index do |k, i|
+          hh[k] ||= (i == kk.count-1 ? s : {})
+          hh = hh[k]
+        end
+        h
       end
-      h
     end
   end
 end

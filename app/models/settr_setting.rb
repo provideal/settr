@@ -1,6 +1,8 @@
 # encoding: utf-8
 class SettrSetting < ActiveRecord::Base
 
+  scope :alterable, where('alterable = ?', true)
+  
   def val
     case typ
       when 'boolean'

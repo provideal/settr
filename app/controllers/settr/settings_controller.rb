@@ -62,7 +62,7 @@ class Settr::SettingsController < Settr::ApplicationController
   end
   
   def settings
-    @settings = Settr.all
+    @settings = Settr.alterable
     
     if request.post?
       params[:settr].each do |k, v|
