@@ -9,9 +9,8 @@ class Settr
         copy_file 'settr.rb', 'config/initializers/settr.rb'
       end
       
-      def copy_and_run_migration
+      def copy_migration
         run 'rake settr_engine:install:migrations'
-        run 'rake db:migrate'
       end
     end
   end
