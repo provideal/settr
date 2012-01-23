@@ -25,14 +25,14 @@
               <option value="<%= option %>" <%= 'selected' if object.value == option %> ><%= t("settr.#{object.key}.#{option}") %></option>
             <% end %>
           </select>
-      <% end %>
+      <% end %> 
     </div>
   <% end %>
 <% else %>
   <%= content_tag "h#{level}" do %>
     <%= t("settr.#{key}._title") %>
   <% end if level > 0 %>
-  <% object.sort_by{|k, v| k}.each do |k, v| %>
+  <% object.sort_by{|x, y| "#{y.is_a?(Hash) ? hash_depth(y) : 0} #{x}"}.each do |k, v| %>
     <%= render :partial => 'setting', :locals => {:object => v, :level => level + 1, :key => "#{key}.#{k}"} %>
   <% end %>
   <div class="horizontal_line grey"></div>

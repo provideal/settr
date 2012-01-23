@@ -10,5 +10,10 @@ class Settr
       options.update(html_options)
       link_to(body, url, options)
     end
+    
+    def hash_depth(hash)
+      hashes = hash.values.select{|h| h.is_a?(Hash)}
+      hashes.present? ? hashes.map{|h| hash_depth(h)}.max + 1 : 1
+    end
   end
 end
