@@ -79,7 +79,7 @@ class Settr
         h
       end
     end
-  end
+  end  
 end
 
 require 'settr/version'
