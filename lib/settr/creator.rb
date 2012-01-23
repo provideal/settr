@@ -24,6 +24,7 @@ class Settr::Creator
     typ = opts[:typ] ||
       if opts[:options] then 'select'
       else case value
+      when TrueClass, FalseClass then 'boolean'
       when String then 'string'
       when Fixnum then 'integer'
       when Float, BigDecimal then 'float'

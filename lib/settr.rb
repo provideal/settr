@@ -30,7 +30,11 @@ class Settr
   end
 
   def self.defaults
-    yield(Settr::Creator)
+    if ActiveRecord::Base.connection.tables.include?('settr_settings')
+      yield(Settr::Creator)
+    else
+      warn "[SETTR WARNING] settr_settings doesn't exists, refusing to create defaults"
+    end
   end
 
   def self.method_missing(*args)
