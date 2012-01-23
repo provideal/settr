@@ -93,3 +93,5 @@ end
 require 'settr/version'
 require 'settr/creator'
 require 'settr/engine'
+require 'settr/controller_functions'
+require 'settr/action_controller'
