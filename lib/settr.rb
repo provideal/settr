@@ -29,6 +29,10 @@ class Settr
     yield self
   end
   
+  def self.defaults
+    yield()
+  end
+  
   def self.method_missing(*args)
     Settr.new.send(*args)
   end
