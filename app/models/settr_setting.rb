@@ -22,6 +22,6 @@ class SettrSetting < ActiveRecord::Base
   end
 
   def options=(opts)
-    write_attribute :options, opts.gsub(' ','').gsub(',', ', ')
+    write_attribute :options, opts.present? ? opts.gsub(' ','').gsub(',', ', ') : nil
   end
 end

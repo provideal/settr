@@ -7,7 +7,7 @@ class Settr
   cattr_accessor :resources
   @@resources
 
-  # header 
+  # header
   cattr_accessor :header_tag, :header_class
   @@header_tag
   @@header_class
@@ -15,24 +15,24 @@ class Settr
   # table
   cattr_accessor :table_class
   @@table_class
-  
+
   # form
   cattr_accessor :form_class
   @@form_class
-  
+
   # links
   cattr_accessor :link_class
   @@link_class
-  
+
   # default way to setup settr
   def self.setup
     yield self
   end
-  
+
   def self.defaults
-    yield()
+    yield(Settr::Creator)
   end
-  
+
   def self.method_missing(*args)
     Settr.new.send(*args)
   end
@@ -49,7 +49,7 @@ class Settr
     setting.val
   end
 
-  def to_s() 
+  def to_s()
     get_val.to_s
   end
   alias_method :to_str, :to_s
@@ -83,8 +83,9 @@ class Settr
         h
       end
     end
-  end  
+  end
 end
 
 require 'settr/version'
+require 'settr/creator'
 require 'settr/engine'
