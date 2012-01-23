@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
 
-  s.add_dependency 'rails', '~> 3.1'
-  s.add_dependency 'jquery-rails', '~> 1.0'
-  s.add_dependency 'sass-rails', '~> 3.1'
-  s.add_dependency 'simple_form', '~> 1.5'
+  s.add_dependency 'rails',        '> 3.1'
+  s.add_dependency 'jquery-rails', '> 1.0'
+  s.add_dependency 'sass-rails',   '> 3.1'
+  s.add_dependency 'simple_form',  '> 1.5'
 end
