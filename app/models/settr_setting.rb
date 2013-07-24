@@ -2,7 +2,7 @@
 class SettrSetting < ActiveRecord::Base
 
   scope :alterable, where('alterable = ?', true)
-  validates_format_of :typ, :with => /^(boolean)|(float)|(integer)|(select)|(string)|(text)+$/
+  validates_format_of :typ, :with => /\A(boolean)|(float)|(integer)|(select)|(string)|(text)+\Z/
 
   def val
     case typ
